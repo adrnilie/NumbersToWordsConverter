@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component } from '@angular/core';
 import { AppService } from './app.service';
 
 @Component({
@@ -10,21 +10,32 @@ import { AppService } from './app.service';
 export class AppComponent {
   constructor(private appService: AppService){}
 
-  result = {
-    input: '',
-    output: ''
+  inputNumber = '';
+  errorMessage = '';
+  result : any = {
+    input : '',
+    output : ''
   };
 
-  ngOnInit(){
-    this.showConvertedNumber(125);
-  }
+  showConvertedNumber(){
+    if (this.isInvalidInput(this.inputNumber)) {
+      this.errorMessage = 'Input is invalid!';
+    }
 
-  showConvertedNumber(no: Number){
-    this.appService.getNumberInWords(no).subscribe((response) =>
-      this.result = {
+    this.appService.getNumberInWords(parseInt(this.inputNumber))
+    .subscribe((response) => this.result = {
         input : response['input'],
         output : response['output']
       },
-    (error) => console.log(error));
+    (error) => this.errorMessage = error.message);
+  }
+
+  isInvalidInput(input: string) {
+    if (isNaN(parseInt(input))) {
+      return true;
+    } else if (input.toString().length > 12) {
+      return true;
+    }
+    return false;
   }
 }
