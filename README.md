@@ -4,21 +4,21 @@
 Service lets user to input a number and returns him the number represented in words.
 
 ##### Table of contents
-1. Overview
-2. Acceptance criteria
-3. Requirements
-4. Architecture
-5. Service
-   - Overview
-   - Third party products
-   - Endpoints
-   - Test runs
-   - Run service
-   - Request example   
-6. Client
-   - Overview
-   - Install and run application
-7. VueJS vs Angular
+1. [Overview](https://github.com/adrnilie/NumbersToWordsConverter/blob/master/README.md#1-overview)
+2. [Acceptance criteria](https://github.com/adrnilie/NumbersToWordsConverter/blob/master/README.md#2-acceptance-criteria)
+3. [Requirements](https://github.com/adrnilie/NumbersToWordsConverter/blob/master/README.md#3requirements)
+4. [Architecture](https://github.com/adrnilie/NumbersToWordsConverter/blob/master/README.md#4-architecture)
+5. [Service](https://github.com/adrnilie/NumbersToWordsConverter/blob/master/README.md#5-service)
+   - [Overview](https://github.com/adrnilie/NumbersToWordsConverter/blob/master/README.md#51-overview)
+   - [Third party products](https://github.com/adrnilie/NumbersToWordsConverter/blob/master/README.md#52-third-party-products)
+   - [Endpoints](https://github.com/adrnilie/NumbersToWordsConverter/blob/master/README.md#53-endpoints)
+   - [Test runs](https://github.com/adrnilie/NumbersToWordsConverter/blob/master/README.md#54-test-runs)
+   - [Run service](https://github.com/adrnilie/NumbersToWordsConverter/blob/master/README.md#55-run-service)
+   - [Request example](https://github.com/adrnilie/NumbersToWordsConverter/blob/master/README.md#56-request-example)
+6. [Client](https://github.com/adrnilie/NumbersToWordsConverter/blob/master/README.md#6-client)
+   - [Overview](https://github.com/adrnilie/NumbersToWordsConverter/blob/master/README.md#61-overview)
+   - [Install and run application](https://github.com/adrnilie/NumbersToWordsConverter/blob/master/README.md#62-install-and-run-application)
+7. [VueJS vs Angular](https://github.com/adrnilie/NumbersToWordsConverter/blob/master/README.md#7-vuejs-vs-angular)
 
 ##### 1. Overview
 Application consists of two components. First is represented by the service, which is a .NET Framework (4.7.2) Web API 2 written in C#, and the second one represents the client application, which interacts with the service by making requests to the API and consuming the response from API.<br/>
