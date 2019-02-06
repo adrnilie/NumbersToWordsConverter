@@ -20,14 +20,14 @@ export class AppComponent {
   showConvertedNumber(){
     if (this.isInvalidInput(this.inputNumber)) {
       this.errorMessage = 'Input is invalid!';
+    } else {
+      this.appService.getNumberInWords(parseInt(this.inputNumber))
+      .subscribe((response) => this.result = {
+          input : response['input'],
+          output : response['output']
+        },
+      (error) => this.errorMessage = error.message);
     }
-
-    this.appService.getNumberInWords(parseInt(this.inputNumber))
-    .subscribe((response) => this.result = {
-        input : response['input'],
-        output : response['output']
-      },
-    (error) => this.errorMessage = error.message);
   }
 
   isInvalidInput(input: string) {
