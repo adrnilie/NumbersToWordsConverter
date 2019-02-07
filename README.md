@@ -49,7 +49,7 @@ Long story short, the algorithm is a multitude of switches, string appends and r
 ##### 5. Service
 ###### 5.1. Overview
 - Type: **ASP.NET Web API 2**
-- Frameword: **.NET Framework 4.7.2**
+- Framework: **.NET Framework 4.7.2**
 - Language: **C# 7**
 - Design priciples: **Single responsibility**, **Encapsulation**
 - Design pattern: **Repository pattern**, **Dependency injection**
